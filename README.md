@@ -1,22 +1,5 @@
-# Adventour
+## TraWhiz
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Tech Stack](#tech-stack)
-- [User Interface](#user-interface)
-- [Contributors](#contributors)
-
-## Introduction
-
-This is travel booking website exclusively for bookings various destinations across India. We are doing this as a group project given to us by Masai School to hone our Development Skills.
-The entire website is fully responsive accross all the screens. This was made easy by using Bootstrap. 
-
-## Deployed Link
-
-https://adventour-masai.netlify.app/
 
 ## Tech Stack
 
@@ -72,13 +55,7 @@ https://adventour-masai.netlify.app/
 ![bookings1](https://github.com/Faisal25DEC/adventour/assets/136161964/e7965745-5548-4fe5-8832-95118763fe9d)
 ![bookings2](https://github.com/Faisal25DEC/adventour/assets/136161964/4fe5daec-55e8-429a-b1cf-3f7743075d01)
 
-## Contributors
 
-- Adnan Baig
-- Himanshu Sharan
-- Md Amir
-- Muhammad Faisal
-- Nikita Rathee
 
 ## Installation
 
