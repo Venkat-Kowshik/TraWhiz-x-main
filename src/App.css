@@ -11,7 +11,7 @@
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #0cc0df #1b1b1b;
+  scrollbar-color: #0cc0df #e6e1e1;
 }
 
 /* Chrome, Edge, and Safari */
@@ -20,7 +20,7 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #1b1b1b;
+  background: #000000;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -36,7 +36,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:#003366;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@
 }
 
 .grey-card {
-  background-color: #1b1b1b;
+  background-color: #003366;
 }
 
 .thumbnails {
