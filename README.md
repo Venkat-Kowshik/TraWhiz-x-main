@@ -2,7 +2,7 @@
 
 
 ## Tech Stack
-
+- MongoDB
 - React.js
 - CSS
 - Bootstrap
