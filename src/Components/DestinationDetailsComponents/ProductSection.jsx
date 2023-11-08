@@ -65,7 +65,7 @@ export const ProductSection = () => {
   // };
   useEffect(() => {
     getPlaceImages(currentProduct.name);
-    // dispatch(getCurrentProductStateDetails(currentProduct.state));
+    dispatch(getCurrentProductStateDetails(currentProduct.state));
     return function cleanup() {
       setCurrentProductImages(null);
     };

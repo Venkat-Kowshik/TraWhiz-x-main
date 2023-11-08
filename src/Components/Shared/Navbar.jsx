@@ -10,11 +10,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { userReducer } from "./../../Redux/userReducer/userReducer";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  loginUser,
-  logoutUser,
-  signupUser,
-} from "../../Redux/userReducer/userActions";
+import { loginUser, logoutUser } from "../../Redux/userReducer/userActions";
 import { getAllProducts } from "../../Redux/productReducer/productActions";
 import { signOut } from "firebase/auth";
 import { setNavbarTyped } from "../../Redux/windowReducer/windowActions";
@@ -37,10 +33,10 @@ export const NavbarShared = () => {
   };
 
   const { isAuth, userDetails } = useSelector((state) => state.userReducer);
-  // console.log(userDetails);
+  console.log(userDetails);
 
   const dispatch = useDispatch();
-  // console.log(isAuth);
+  console.log(isAuth);
 
   const debounce = (func, delay) => {
     let timeoutId;
@@ -59,7 +55,7 @@ export const NavbarShared = () => {
       return product.name.toLowerCase().includes(inputField);
     });
     setFilteredProducts(filteredProductsArray);
-    // console.log(filteredProductsArray);
+    console.log(filteredProductsArray);
   };
 
   useEffect(() => {
@@ -69,19 +65,19 @@ export const NavbarShared = () => {
   useEffect(() => {
     const debouncedFunc = debounce(filterTotalProducts, 2000);
     debouncedFunc(totalProducts);
-    // console.log(totalProducts);
+    console.log(totalProducts);
   }, [inputField, totalProducts]);
 
   return (
     <div>
       <nav
-        style={{ background: "#131313" }}
+        style={{ background: "#003366" }}
         className="navbar fixed-top navbar-expand-lg navbar-dark "
       >
         <div className="container">
           <Link to="/">
-            <img src={logo} alt="" className="img-fluid me-2" width={50} />
-            Adventour.
+            <img src={logo} alt="" className="img-fluid me-2" width={75} />
+            TraWhiz
           </Link>
           <button
             className="navbar-toggler"
@@ -167,82 +163,11 @@ export const NavbarShared = () => {
                   aria-disabled="true"
                   tabIndex="-1"
                 >
-                  Destinations
+                  Explorer's Picks
                 </p>
               </Link>
 
-              <Link
-                to="/bookings"
-                className={`nav-item ${
-                  isLinkActive("/bookings") ? "active-link" : ""
-                }`}
-                onClick={() => setActiveLink("bookings")}
-              >
-                <p
-                  className="nav-link p-0 mt-2"
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  Bookings
-                </p>
-              </Link>
-              <Link className="nav-item">
-                <p className="nav-link p-0 mt-2" tabIndex="-1">
-                  {isAuth && userDetails?.name}
-                </p>
-              </Link>
-              {!isAuth ? (
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Login
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li
-                      className="dropdown-item"
-                      onClick={() => {
-                        signInWithGooglePopup()
-                          .then((user) => {
-                            console.log(user);
-                            dispatch(
-                              signupUser({
-                                name: user.user.displayName,
-                                email: user.user.email,
-                                password: "123456",
-                                googleSignIn: true,
-                              })
-                            );
-                          })
-                          .catch((res) => {
-                            alert("Something went wrong");
-                          });
-                      }}
-                    >
-                      Login With Google
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/auth">
-                        Login With Email
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              ) : (
-                <button
-                  style={{ height: "2.5rem" }}
-                  className="btn"
-                  onClick={async () => {
-                    await signOutUser();
-                    dispatch(logoutUser());
-                  }}
-                >
-                  Logout
-                </button>
-              )}
+              
             </ul>
           </div>
         </div>

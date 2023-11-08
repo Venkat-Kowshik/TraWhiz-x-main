@@ -10,13 +10,13 @@ export const Footer = () => {
             <div className="col-lg-6">
               <div className="d-inline-flex">
                 <img src={logo} style={{ width: "30px" }} alt="" />
-                <h6 className="mt-2 ms-2">Adventour.</h6>
+                <h6 className="mt-2 ms-2">TraWhiz</h6>
               </div>
               <p className="sub mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                porro, excepturi a quam consequatur vel dolor atque voluptates
-                itaque. Doloremque delectus perferendis impedit nesciunt, atque
-                voluptatibus reiciendis magnam eaque repellendus.
+              TraWhiz is an innovative chatbot designed to enhance the travel experience for users by 
+              providing personalized assistance, recommendations, and information during their journeys. 
+              This chatbot is specifically tailored for travelers, whether they are planning a trip, 
+              navigating a new destination, or seeking travel-related information.
               </p>
             </div>
             <div className="col-lg-2 col-sm-6 col-xs-6 mt-3">
@@ -28,36 +28,32 @@ export const Footer = () => {
                 <p className="sub">Cancellation</p>
               </div>
             </div>
-            <div className="col-lg-2 col-sm-6 col-xs-6 mt-3">
-              <h6>Company</h6>
-              <div className="footer-links mt-4">
-                <p className="sub">Careers</p>
-                <p className="sub">Our Team</p>
-              </div>
-            </div>
+           
             <div className="col-lg-2 col-sm-6 col-xs-6 mt-3">
               <h6>Support</h6>
               <div className="footer-links mt-4">
                 <p className="sub">
-                  Tower A, Block C,
+                  Amrita School of Engineering
                   <br />
-                  Area C 24st, Hurany-490367
+                  Kollam
+                  <br/>
+                  Kerala
                 </p>
                 <p className="sub">
-                  adventour@gmail.com <br />
-                  +32 9737290930
+                  trawhiz@gmail.com <br />
+                  +91 9854622521
                 </p>
               </div>
             </div>
           </div>
           <div className="mt-3">
-            <h6 style={{ fontSize: "14px" }}>Facebook ● Instagram ● YouTube</h6>
+            <h6 style={{ fontSize: "14px" }}> ● Instagram ● YouTube</h6>
           </div>
           <hr />
           <div className="row">
             <div className="d-flex justify-content-between">
               <p style={{ color: "#6c9999", fontSize: "12px" }}>
-                Ⓒ 2022 Adventour All Rights Reserved
+                Ⓒ 2023 TraWhiz All Rights Reserved
               </p>
               <div className="quick-links d-flex gap-4">
                 <h6 style={{ fontSize: "14px" }}>Terms & Condition </h6>

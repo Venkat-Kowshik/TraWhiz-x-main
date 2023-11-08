@@ -1,9 +1,9 @@
 import {
-  GET_USER_DETAILS,
   INITIATE_LOGIN,
   INITIATE_SIGNUP,
   LOGIN_USER,
   LOGOUT_USER,
+  UPDATE_USER_BOOKINGS,
 } from "./userTypes";
 
 const initialState = {
@@ -26,12 +26,6 @@ export const userReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         isAuth: true,
-      };
-    }
-    case GET_USER_DETAILS: {
-      return {
-        ...state,
-        isAuth: true,
         userDetails: payload,
       };
     }
@@ -50,7 +44,12 @@ export const userReducer = (state = initialState, { type, payload }) => {
         signUp: false,
       };
     }
-
+    case UPDATE_USER_BOOKINGS: {
+      return {
+        ...state,
+        userDetails: { ...payload },
+      };
+    }
     default: {
       return state;
     }

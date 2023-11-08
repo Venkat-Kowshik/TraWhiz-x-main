@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import bannerBackground from "../../Assets/banner-background.jpg";
 import "./DestinationBanner.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -37,48 +36,7 @@ const DestinationBanner = () => {
                 <span style={{ color: "#0CC0DF" }}> Experiences.</span>
               </h1>
             </div>
-            {/* <div className="search-destinations d-flex">
-              <div style={{ background: "#1b1b1b" }} className="col-5">
-                <label style={{ background: "#1b1b1b" }} htmlFor="">
-                  Location
-                </label>
-                <select
-                  style={{ background: "#1b1b1b", color: "white" }}
-                  className="cities form-select mt-1"
-                >
-                  <option value="default">-- Choose City --</option>
-                  <option value="Gujarat">Gujarat</option>
-                  <option value="Himachal Pradesh">Himachal Pradesh</option>
-                  <option value="Uttarakhand">Uttarakhand</option>
-                  <option value="Andaman">Andaman & Nicobar</option>
-                  <option value="Punjab">Punjab</option>
-                  <option value="Rajasthan">Rajasthan</option>
-                  <option value="Kerala">Kerala</option>
-                  <option value="Maharashtra">Maharashtra</option>
-                </select>
-              </div>
-              <div className="col-1 vl"></div>
-              <div style={{ background: "#1b1b1b" }} className="col-5 ms-4">
-                <label style={{ background: "#1b1b1b" }} htmlFor="">
-                  Date
-                </label>
-                <input
-                  style={{
-                    background: "#1b1b1b",
-                    color: "white",
-                    width: "60%",
-                  }}
-                  type="date"
-                  className="form-control mt-1"
-                />
-              </div>
-              <button className="btn py-0">
-                <i
-                  class="fa-solid fa-magnifying-glass"
-                  style={{ color: "#000919", background: "transparent" }}
-                ></i>
-              </button>
-            </div> */}
+            {}
           </div>
           <div className="col-lg-5 col-md-5 d-none d-lg-block d-md-block">
             <div className="swiper-right">

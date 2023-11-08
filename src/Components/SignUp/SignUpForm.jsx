@@ -13,14 +13,13 @@ import {
   initialLogin,
   initiateSignUp,
   loginUser,
-  signupUser,
 } from "../../Redux/userReducer/userActions";
 import { useDispatch, useSelector } from "react-redux";
 // import Button from "../button/button.component";
 import { userReducer } from "./../../Redux/userReducer/userReducer";
 
 const defaultFormFields = {
-  name: "",
+  displayName: "",
   email: "",
   password: "",
   confirmPassword: "",
@@ -29,7 +28,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [shouldRedirect, setShouldRedirect] = useState(false);
   const [formFields, steFormFields] = useState(defaultFormFields);
-  const { name, email, password, confirmPassword } = formFields;
+  const { displayName, email, password, confirmPassword } = formFields;
   const dispatch = useDispatch();
   const { isAuth } = useSelector((state) => state.userReducer);
   const handleChange = (event) => {
@@ -51,7 +50,20 @@ const SignUpForm = () => {
       return;
     }
     try {
-      dispatch(signupUser(formFields));
+      const { user } = await createAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      await updateUserDocumentFromAuth(user, displayName);
+      // const data = getUserDocumentFromAuth(user);
+      // data.then((res) => {
+      //   console.log(res.data());
+      //   dispatch(loginUser({ ...res.data(), uid: user.uid }));
+      //   resetFormFields();
+      // });
+
+      console.log(user);
     } catch (err) {
       console.log(err);
     }
@@ -73,8 +85,8 @@ const SignUpForm = () => {
           type="text"
           required
           onChange={handleChange}
-          name="name"
-          value={name}
+          name="displayName"
+          value={displayName}
         />
 
         <FormInput

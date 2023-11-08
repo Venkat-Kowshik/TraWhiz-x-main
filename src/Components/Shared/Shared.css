@@ -1,6 +1,6 @@
 :root {
   --styled-text-color: #0cc0df;
-  --primary-background-color: #1b1b1b;
+  --primary-background-color:#003366;
 }
 
 a {
@@ -11,7 +11,7 @@ a:hover {
   color: white;
 }
 .btn {
-  background-color: #0cc0df;
+  background-color: #003366;
   color: #131313;
 }
 
@@ -20,7 +20,7 @@ a:hover {
 }
 
 .search-box {
-  background: #1b1b1b;
+  background: #003366;
   outline: none;
   border: none;
   width: 400px;
@@ -31,7 +31,7 @@ a:hover {
 }
 
 .card {
-  background-color: #131313;
+  background-color:#003366;
   border-radius: 20px;
 }
 
@@ -46,7 +46,7 @@ a:hover {
 
 .card:hover,
 .card-body:hover {
-  background-color: #1b1b1b;
+  background-color: #003366;
   transition: 0.5s;
 }
 
@@ -65,13 +65,14 @@ a:hover {
   font-size: 1rem;
 }
 .dropdown-menu {
-  background-color: var(--primary-background-color);
+  background-color: #003366;
 }
 .dropdown-item {
   color: white;
+  background-color:#003366;
 }
 .dropdown-item:hover {
-  background-color: rgb(47, 83, 247);
+  background-color: rgb(48, 121, 204);
   color: white;
 }
 
@@ -83,14 +84,14 @@ a:hover {
 
 .productList {
   width: 400px;
-  background-color: #1b1b1b;
+  background-color: #003366;
   border-bottom: 0.5px #0cc0df solid;
   height: 500px;
   overflow-x: scroll;
 }
 
 .search-card:hover {
-  background-color: #131313;
+  background-color: #003366;
   transition-duration: 0.5s;
 }
 

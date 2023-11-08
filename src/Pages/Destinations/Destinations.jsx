@@ -8,7 +8,7 @@ import {
   getStateProducts,
   setStateProductsNull,
 } from "../../Redux/productReducer/productActions";
-import Fade from "react-reveal/Fade";
+import Fade from 'react-reveal/Fade';
 import { signInWithGooglePopup } from "../../Utils/firebase/firebase";
 import DestinationCard from "../../Components/DestinationCard/DestinationCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,7 +28,6 @@ import Pagination, {
   PaginationComp,
 } from "../../Components/Pagination/Pagination";
 const Destinations = () => {
-  const { userBookings } = useSelector((state) => state.bookingReducer);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [page, setPage] = useState(1);
   const [pageIndex, setPageIndex] = useState(1);
@@ -38,38 +37,32 @@ const Destinations = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams({});
-  // console.log(productsPerPage);
-  console.log(userBookings);
-
+  console.log(productsPerPage);
   useEffect(() => {
     if (location.state && location.state.state) {
       dispatch(getStateProducts(location.state.state));
-      // console.log(stateProducts);
+      console.log(stateProducts);
       setSearchParams({ state: location.state.state });
     }
     dispatch(getProducts(page));
   }, [page]);
-  // console.log(productsPerPage);
+  console.log(productsPerPage);
   return (
     <div className="destinations-wrapper container">
       <Fade left>
-        <DestinationBanner />
+      <DestinationBanner />
       </Fade>
-      {stateProducts.length ? (
-        <button
-          style={{ marginTop: "10%" }}
-          className="btn"
-          onClick={() => {
-            dispatch(setStateProductsNull());
-            dispatch(getProducts(page));
-            setSearchParams({});
-          }}
-        >
-          See All
-        </button>
-      ) : (
-        ""
-      )}
+      {stateProducts.length?  <button
+      style={{marginTop:"10%"}}
+        className="btn"
+        onClick={() => {
+          dispatch(setStateProductsNull());
+          dispatch(getProducts(page));
+          setSearchParams({});
+        }}
+      >
+        See All
+      </button> : ""}
 
       <div className="destination-cards-wrapper">
         {stateProducts.length

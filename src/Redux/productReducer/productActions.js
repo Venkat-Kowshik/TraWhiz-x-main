@@ -15,7 +15,7 @@ const createAction = (type, payload) => {
   return { type, payload };
 };
 
-const baseUrl = `http://localhost:8080`;
+const baseUrl = `https://weak-gray-tortoise-fez.cyclic.app`;
 
 export const getAllProducts = () => async (dispatch) => {
   const apiRes = axios
@@ -26,7 +26,7 @@ export const getAllProducts = () => async (dispatch) => {
 export const getProducts = (page) => async (dispatch) => {
   dispatch(createAction(GET_PRODUCT_REQUEST));
   const apiRes = axios
-    .get(`${baseUrl}/touristDestinations?page=${page}&limit=9`)
+    .get(`${baseUrl}/touristDestinations?_page=${page}&_limit=9`)
     .then((res) => {
       console.log(res.data);
       dispatch(createAction(GET_PRODUCT_SUCCESS, res.data));
@@ -60,7 +60,6 @@ export const getSingleProduct = (id) => async (dispatch) => {
   const apiRes = axios
     .get(`${baseUrl}/touristDestinations/${id}`)
     .then((res) => {
-      console.log(res);
       dispatch(createAction(GET_SINGLE_PRODUCT, res.data));
     });
 };

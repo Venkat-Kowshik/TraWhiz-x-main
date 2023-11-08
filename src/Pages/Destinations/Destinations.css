@@ -1,5 +1,5 @@
 .destinations-wrapper {
-  background-color: #131313;
+  background-color: #003366;
   margin-top: 10%;
 }
 .destination-cards-wrapper {
@@ -23,6 +23,6 @@
 
 @media only screen and (min-width: 992px) {
   .destination-cards-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

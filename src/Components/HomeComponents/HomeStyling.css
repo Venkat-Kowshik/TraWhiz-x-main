@@ -6,7 +6,7 @@
 
 .background {
 
-  background: #131313;
+  background: #003366;
 }
 
 .background span {
@@ -71,7 +71,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: #131313;
+  background: #003366;
   color: white;
 }
 
@@ -80,10 +80,21 @@ h1 {
 }
 
 .search-destinations {
-  background: #1b1b1b;
+  background: #003366;
   padding: 5%;
   border-radius: 25px;
+  position:relative;
 }
+
+
+.search-destinations::before{
+  content: '';
+  position: absolute;
+  
+
+}
+
+
 
 .home-div {
   margin-top: 10%;
@@ -99,11 +110,11 @@ h1 {
 }
 
 .btn {
-  background-color: #0cc0df;
+  background-color:white;
 }
 
 .btn:hover {
-  background-color: #1b1b1b;
+  background-color:White;
 }
 
 .vl {
@@ -113,9 +124,18 @@ h1 {
 }
 
 .image-background {
-  background-color: #1b1b1b;
+  background-color: #003366;
+  border-radius: 50%;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  width: 500px;
+ 
+}
+
+.image-background img:hover{
+  transform:scale(1.2);
+  opacity:0.8;
+  border-radius: 50%;
 }
 
 .banner-image {
@@ -130,7 +150,7 @@ input[type="date"] {
 }
 
 .holiday-easily {
-  background-color: #1b1b1b;
+  background-color: #003366;
 }
 
 .feature-icons {
@@ -153,7 +173,7 @@ input[type="date"] {
 }
 
 .testi-card:hover {
-  background-color: #1b1b1b;
+  background-color: white;
   border-radius: 10px;
   transition-duration: 0.5s;
 }
