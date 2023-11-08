@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import MinMaxScaler
 
+#THis uses supervised learning, which classifies user data thorugh feedback rating and recommends top places 
+
 # Sample user interactions data
 user_interactions = [
     {"user": "user1", "destination": "Paris", "rating": 5, "food": 4, "climate": 5, "historical_places": 5, "no_of_people_visited": 100},
